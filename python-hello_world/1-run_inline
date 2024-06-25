@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-#creating a script that runs a python code
-
 python3 "$PYCODE"
