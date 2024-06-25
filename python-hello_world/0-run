@@ -1,4 +1,2 @@
-#!/usr/bin/env bash
-#creating a script that runs a python code
-
+#!/bin/bash
 python3 "$PYFILE"
