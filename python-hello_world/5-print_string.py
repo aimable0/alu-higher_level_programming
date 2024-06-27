@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
 str = "Holberton School"
-print(3 * str)
+tripled_str = 3 * str
+print(tripled_str)
 print(str[:10])
