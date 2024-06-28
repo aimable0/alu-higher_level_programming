@@ -5,7 +5,7 @@ if number < 0:
     number = -1 * number
     neg_number = -1 * (number % 10)
     if neg_number < 6 and neg_number != 0:
-        print (f"Last digit of {number} is {neg_number} and is less than 6 and not 0")
+        print (f"Last digit of {number * -1} is {neg_number} and is less than 6 and not 0")
 else:
     last_digit = number  % 10
     if last_digit > 5:
