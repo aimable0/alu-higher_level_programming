@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+chmod +x *
+git add .
+git commit -m "codes for python_if_else"
+git push
