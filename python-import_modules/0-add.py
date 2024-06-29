@@ -5,5 +5,5 @@ if __name__ = "__main__"
 
     a = 1
     b = 2
-    sum_ab = add_0.add(a, b)
+    sum_ab = add(a, b)
     print("{} + {} = {}".format(a, b, sum_ab))
