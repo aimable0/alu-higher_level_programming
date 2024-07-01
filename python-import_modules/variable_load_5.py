@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-def returns_var():
-    a = 98
+def returns_var(a):
     return a
