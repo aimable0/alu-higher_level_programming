@@ -10,7 +10,7 @@ if __name__ == "__main__":
         print("0 arguments.")
     elif total_args == 2:
         print("1 argument:")
-        print(sys.argv[1])
+        print(f"{arg_num}: {sys.argv[1]}")
     else:
         print(f"{total_args - 1} arguments:")
         for i in range(total_args):
