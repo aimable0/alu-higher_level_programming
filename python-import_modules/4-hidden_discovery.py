@@ -3,7 +3,7 @@
 if __name__ == "__main__":
     import hidden_4
 
-    file_name = "hidden_4.pyc"
+    file_name = "hidden_4"
 
     with open(file_name, 'r') as file:
         for line in file:
