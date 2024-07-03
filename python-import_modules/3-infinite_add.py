@@ -13,7 +13,7 @@ if __name__ == "__main__":  # condition: only runs as main not when imported
     else:
         for i in range(tot_num):  # for more than 2 arguments
             if i > 0:
-                str_num = f"{sys.argv[i]}"  # references the number per iteration
+                str_num = f"{sys.argv[i]}"
                 int_num = int(str_num)  # cast the str to int format
                 sum = sum + int_num  # add it to the sum on each iteration
     print(sum)
