@@ -7,5 +7,5 @@ if __name__ == "__main__":
 
     with open(file_name, 'r') as file:
         for line in file:
-            if line[:2] != "__"
+            if line[:2] != "__":
                 print(line)
