@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-if __name__ == "__main__": # a condition to make it not run when imported and only when run as the main program
+if __name__ == "__main__":
     import sys
 
     tot_num = len(sys.argv)
     sum = 0
 
     if tot_num == 1: #for one argument which is the script_name
-        sum = 0 
+        sum = 0
     elif tot_num == 2: #for two argument meaning a number and the script_name
-        num = f"{sys.argv[1]}" #we collect the number
+        num = f"{sys.argv[1]}"
         sum = int(num) #we just return the number
     else:
         for i in range(tot_num): #for more than 2 arguments
             if i > 0:
-                str_num = f"{sys.argv[i]}" #collect the number on each iteration 
-                int_num = int(str_num) #cast the number from string to int format 
+                str_num = f"{sys.argv[i]}" #collect the number on each iteration
+                int_num = int(str_num) #cast the number from string to int format
                 sum = sum + int_num #add it to the sum on each iteration
-    print(sum) #print the sum
+    print(sum)
