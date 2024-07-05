@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+git add .
+git commit -m "codes for lists and tuples"
+git push
