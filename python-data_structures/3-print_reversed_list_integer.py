@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
+    if my_list is None:
+        return None
     for number in sorted(my_list, reverse=True):
-        if my_list[0] is None:
-            return
-        else:
-            print("{:d}".format(number))
+        print("{:d}".format(number))
