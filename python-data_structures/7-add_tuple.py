@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
+
     if len(tuple_a) > 1 and len(tuple_b) > 1:
         add_1 = tuple_a[0] + tuple_b[0]
         add_2 = tuple_a[1] + tuple_b[1]
@@ -24,4 +24,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         add_2 = 0
 
     added_tuple = (add_1, add_2)
+
     return added_tuple
