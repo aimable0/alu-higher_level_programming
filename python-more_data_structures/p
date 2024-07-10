@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+git add .
+git commit -m "codes for data structres"
+git push
