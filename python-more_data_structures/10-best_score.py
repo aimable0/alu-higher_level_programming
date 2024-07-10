@@ -2,7 +2,9 @@
 
 
 def best_score(a_dictionary):
-    if a_dictionary == None:
+    if a_dictionary is None:
+        return None
+    if a_dictionary == {}:
         return None
     best_scores = list(sorted(a_dictionary.values()))
     best_score = best_scores[-1]
