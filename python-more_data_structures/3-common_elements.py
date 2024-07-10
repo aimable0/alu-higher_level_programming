@@ -2,5 +2,5 @@
 
 def common_elements(set_1, set_2):
     set1_i_set2 = set_1 & set_2
-    return set1_i_set2i
+    return set1_i_set2
 
