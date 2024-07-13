@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module contains a class that prints squares given certain cordinates"""
+
+
 class Square:
     """This class represents a sqaure"""
 
