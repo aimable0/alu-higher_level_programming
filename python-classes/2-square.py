@@ -4,7 +4,7 @@
 
 class Square:
     """This class defines a square with private datas"""
-    
+
     def __init__(self, size=0):
         """initiates Square attributes"""
         if type(size) is int:
