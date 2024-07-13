@@ -1,0 +1,56 @@
+#!/usr/bin/python3
+"""This module contains a class that represents a rectangle"""
+
+
+class Rectangle:
+    """docstring"""
+
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        return self._Rectangle__width
+
+    @width.setter
+    def width(self, value):
+        if type(value) is int:
+            if value < 0:
+                raise ValueError("width must be >= 0")
+            else:
+                self._Rectangle__width = value
+        else:
+            raise TypeError('width must be an integer')
+
+    @property
+    def height(self):
+        return self._Rectangle__height
+
+    @height.setter
+    def height(self, value):
+        if type(value) is int:
+            if value < 0:
+                raise ValueError('height must be >= 0')
+            else:
+                self._Rectangle__height = value
+        else:
+            raise TypeError('height must be an integer')
+
+    def area(self):
+        return self._Rectangle__height * self._Rectangle__width
+
+    def perimeter(self):
+        if self._Rectangle__width == 0 or self._Rectangle__height == 0:
+            return 0
+        return 2 * (self._Rectangle__width + self._Rectangle__height)
+    
+    def __str__(self):
+        if self._Rectangle__height == 0 or self._Rectangle__width == 0:
+            return f""
+        else:
+            rectangle_str = ""
+            for i in range(self._Rectangle__height):
+                rectangle_str += '#' * self._Rectangle__width + '\n'
+
+            return rectangle_str.strip()
