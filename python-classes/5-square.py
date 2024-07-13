@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module contains a an expanded Square class"""
+"""This module contains an expanded Square class"""
 
 
 class Square:
@@ -22,7 +22,7 @@ class Square:
                 self.__size = value
         else:
             raise TypeError('size must be na integer')
- 
+
     def area(self):
         """returns a square when called"""
         return self.__size * self.__size
