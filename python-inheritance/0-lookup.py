@@ -2,5 +2,5 @@
 
 
 def lookup(obj)
-    new_list = list(obj.__dict__)
-    return new_list
+    list_1 = list(dir(obj))
+    return list_1
