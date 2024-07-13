@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+chmod +x *
+git add .
+git commit -m "more simple projects for classes"
+git push
