@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""contains a function that return"""
+"""This module contains a function that returns a dir"""
 
-def lookup(obj)
 
+def lookup(obj):
     list_1 = list(dir(obj))
-    return list_1
+    return list_01
