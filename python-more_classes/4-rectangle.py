@@ -57,30 +57,3 @@ class Rectangle:
         return rectangle.strip()
     def __repr__(self):
         return f"Rectangle({self._width}, {self._height})"
-
-    def __del__(self):
-        print('Bye rectangle...')
-        type(self).number_of_instances -= 1
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        if isinstance(rect_1, Rectangle):
-            a_1 = rect_1.area()
-        else:
-            raise TypeError('rect_1 must be an instance of Rectangle')
-        if isinstance(rect_2, Rectangle):
-            a_2 = rect_2.area()
-        else:
-            raise TypeError('rect_2 must be an instance of Rectangle')
-        if a_1 == a_2:
-            return rect_1
-        elif a_1 > a_2:
-            return rect_1
-        elif a_1 < a_2:
-            return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        cls.width = size
-        cls.height = size
-        return Rectangle(cls.width, cls.height)
