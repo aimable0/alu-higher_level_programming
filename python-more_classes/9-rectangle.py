@@ -83,6 +83,13 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        cls.width = size
-        cls.height = size
+        if isinstance(size, int):
+            if size < 0:
+                raise ValueError('width must be >= 0')
+            else:
+                cls.width = size
+                cls.height = size
+        else:
+            raise TypeError('width must be an integer')
+
         return Rectangle(cls.width, cls.height)
