@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from 7-base_geometry.py import BaseGeometry
 """This module represents rectangle that inherits from another class"""
 
 
