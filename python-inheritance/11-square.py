@@ -19,4 +19,4 @@ class Square(Rectangle):
         return self._size ** 2
 
     def __str__(self):
-        return f"[Square] {self._width}/{self._height}"
+        return f"[Square] {self._size}/{self._size}"
