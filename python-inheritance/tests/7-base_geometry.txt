@@ -1,37 +1,51 @@
-#!/usr/bin/python3
-import unittest
-from 7-base_geometry import BaseGeometry
+>>> BaseGeo = __import__('7-base_geometry').BaseGeometry
 
-class TestBaseGeometry(unittest.TestCase):
+>>> base = BaseGeo()
 
-    def setUp(self):
-        self.bg = BaseGeometry()
+>>> base.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
 
-    def test_area(self):
-        with self.assertRaises(Exception) as context:
-            self.bg.area()
-        self.assertTrue('area() is not implemented' in str(context.exception))
+>>> base.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-    def test_integer_validator_type(self):
-        with self.assertRaises(TypeError) as context:
-            self.bg.integer_validator("name", "John")
-        self.assertTrue('name must be an integer' in str(context.exception))
+>>> base.integer_validator("age")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-    def test_integer_validator_value(self):
-        with self.assertRaises(ValueError) as context:
-            self.bg.integer_validator("age", 0)
-        self.assertTrue('age must be greater than 0' in str(context.exception))
+>>> base.integer_validator("age", (4,))
+Traceback (most recent call last):
+TypeError: age must be an integer
 
-        with self.assertRaises(ValueError) as context:
-            self.bg.integer_validator("distance", -4)
-        self.assertTrue('distance must be greater than 0' in str(context.exception))
+>>> base.integer_validator("my_int", 12)
 
-    def test_integer_validator_valid(self):
-        try:
-            self.bg.integer_validator("my_int", 12)
-            self.bg.integer_validator("width", 89)
-        except Exception as e:
-            self.fail(f"integer_validator raised {type(e).__name__} unexpectedly!")
+>>> base.integer_validator("width", 89)
 
-if __name__ == "__main__":
-    unittest.main()
+>>> base.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> base.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> base.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+
+>>> base.integer_validator("age", [3])
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> base.integer_validator("age", True)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> base.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> base.integer_validator("age", None)
+Traceback (most recent call last):
+TypeError: age must be an integer
