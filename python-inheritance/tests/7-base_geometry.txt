@@ -1,22 +1,37 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+import unittest
+from 7-base_geometry import BaseGeometry
 
-bg = BaseGeometry()
+class TestBaseGeometry(unittest.TestCase):
 
-bg.integer_validator("my_int", 12)
-bg.integer_validator("width", 89)
+    def setUp(self):
+        self.bg = BaseGeometry()
 
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def test_area(self):
+        with self.assertRaises(Exception) as context:
+            self.bg.area()
+        self.assertTrue('area() is not implemented' in str(context.exception))
 
-try:
-    bg.integer_validator("age", 0)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def test_integer_validator_type(self):
+        with self.assertRaises(TypeError) as context:
+            self.bg.integer_validator("name", "John")
+        self.assertTrue('name must be an integer' in str(context.exception))
 
-try:
-    bg.integer_validator("distance", -4)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def test_integer_validator_value(self):
+        with self.assertRaises(ValueError) as context:
+            self.bg.integer_validator("age", 0)
+        self.assertTrue('age must be greater than 0' in str(context.exception))
+
+        with self.assertRaises(ValueError) as context:
+            self.bg.integer_validator("distance", -4)
+        self.assertTrue('distance must be greater than 0' in str(context.exception))
+
+    def test_integer_validator_valid(self):
+        try:
+            self.bg.integer_validator("my_int", 12)
+            self.bg.integer_validator("width", 89)
+        except Exception as e:
+            self.fail(f"integer_validator raised {type(e).__name__} unexpectedly!")
+
+if __name__ == "__main__":
+    unittest.main()
