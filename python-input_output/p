@@ -1,0 +1,4 @@
+chmod +x *
+git add .
+git commit -m "files input and output"
+git push
