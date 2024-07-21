@@ -6,8 +6,8 @@ Contains function that appends to text file and returns num chars added
 """
 
 
-def appends_write(filename="", text=""):
+def append_write(filename="", text=""):
     """appends to text file and returns num chars added"""
-    with open(filename, "a", encoding="utf-8") as f:
+    with open(filename, mode="a", encoding="utf-8") as f:
         f.write(text)
         return len(text)
