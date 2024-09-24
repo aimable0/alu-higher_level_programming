@@ -1,19 +1,15 @@
 #!/usr/bin/node
-
 const args = process.argv.slice(2);
 
-function factorial (i) {
-  let factorial = 1;
+function factorial(num) {
 
-  if (/^[1-9]\d*$/.test(i)) {
-    i = parseInt(i);
-    while (i !== 0) {
-      factorial *= i;
-      i--;
-    }
-    return factorial;
-  } else {
-    return '1';
+  if (isNaN(num) || num <= 0) {
+    return 1;
   }
+
+  if (num === 0) {
+    return 1;
+  }
+  return num * factorial(num - 1);
 }
 console.log(factorial(args[0]));
