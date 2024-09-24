@@ -1,9 +1,8 @@
 #!/usr/bin/node
 const args = process.argv;
 let len = 0;
-
 // loop through the array and know the length
-for (const x in args) {
+for (len in args) {
   len++; // increment lenght each time.
 }
 

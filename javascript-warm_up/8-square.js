@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv.slice(2);
 const x = 'X';
-if (args.length == 1) {
+if (args.length === 1) {
   if (/^[1-9]\d*$/.test(args[0])) {
     const size = args[0];
 
