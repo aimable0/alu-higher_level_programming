@@ -1,2 +1,2 @@
-//function to be exported
+// function to be exported
 exports.add = (a, b) => a + b;
