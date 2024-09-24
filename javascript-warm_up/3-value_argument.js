@@ -3,7 +3,7 @@ const args = process.argv;
 let len = 0;
 
 // loop through the array and know the length
-for (x in args) {
+for (const x in args) {
   len++; // increment lenght each time.
 }
 
