@@ -1,5 +1,9 @@
 #!/usr/bin/node
 class Rectangle {
-	constructor() {
-	}
+  constructor () {
+    this.width = 0;
+    this.height = 0;
+  }
 }
+const rectangle = new Rectangle();
+console.log(rectangle);
