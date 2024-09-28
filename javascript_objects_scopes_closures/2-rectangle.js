@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/node
 class Rectangle {
   constructor (_w, _h) {
     if (_w > 0 && _h > 0) {
