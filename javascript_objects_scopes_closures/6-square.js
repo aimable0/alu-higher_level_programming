@@ -2,7 +2,7 @@
 const SquareParent = require('./5-square');
 
 class Square extends SquareParent {
-  charPrint(c) {
+  charPrint (c) {
     // If no character is provided, default to 'X'
     if (c === undefined) {
       c = 'X';
@@ -13,6 +13,5 @@ class Square extends SquareParent {
       console.log(c.repeat(this.width));
     }
   }
-
 }
 module.exports = Square;
