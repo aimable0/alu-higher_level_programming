@@ -1,4 +1,4 @@
-//promises.. : help in handling asynchronous code..
+// promises.. : help in handling asynchronous code..
 
 // const getNames = (url) => {
 //     return new Promise((resolve, reject) => {
@@ -28,22 +28,21 @@
 //     console.log(error);
 // })
 
+// fetch api..: it has promises implemented under the hood
+const url = 'index.json';
 
-//fetch api..: it has promises implemented under the hood
-const url = 'index.json'
-
-//fetch url returns a response when successfull
+// fetch url returns a response when successfull
 fetch(url).then((response) => {
-    if (response.status === 200) {
-        console.log(response)
-        console.log(response.json()); //returns a promise ..parsed.
-    } else {
-        console.log('failed')
-    }
+  if (response.status === 200) {
+    console.log(response);
+    console.log(response.json()); // returns a promise ..parsed.
+  } else {
+    console.log('failed');
+  }
 }).then(data => {
-    console.log(data)
+  console.log(data);
 }).catch((error) => {
-    console.log('rejected', error);
-})
+  console.log('rejected', error);
+});
 
-//fetch only fails when there is a network failure..
+// fetch only fails when there is a network failure..

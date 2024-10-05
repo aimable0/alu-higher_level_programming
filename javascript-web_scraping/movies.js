@@ -1,13 +1,13 @@
 const getMovies = async () => {
-    const response = await fetch('index.json');
-    return response;
-}
+  const response = await fetch('index.json');
+  return response;
+};
 
 getMovies().then(response => {
-    console.log(response)
+  console.log(response);
 }).catch(error => {
-    console.error(error);
-})
+  console.error(error);
+});
 
 // const request = require('request');
 
