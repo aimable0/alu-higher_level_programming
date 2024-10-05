@@ -10,4 +10,4 @@ request('https://swapi-api.alx-tools.com/api/films/', (error, response, body) =>
     const data = JSON.parse(body);
     console.log(data.results[index].title);
   }
-})
+});
