@@ -6,21 +6,16 @@ request(url, (error, response, body) => {
   if (error) {
     console.error(error);
   } else {
+    let arr = {}
     const data = JSON.parse(body);
-    let taskArr = {};
-    let i = 0
-
-    //loop here..
-    let count = 0
-    while(i < 200) {
-        if (data[i].completed === true) {
-            for (let m = 0; m < 20; m++) {
-                taskAArr[data[]]
-            }
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].userId in arr && data[i].completed === true) {
+            arr[data[i].userId] += 1; 
+        } else if (data[i].completed === true){
+            arr[data[i].userId] = 1;
         }
-        i++
     }
-  } 
-
+    console.log(arr);
+  }
 
 })
