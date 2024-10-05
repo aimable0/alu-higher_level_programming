@@ -1,15 +1,12 @@
-#!/usr/bin/node
+#!/usr/bin/node 
 
 const request = require('request');
 
-// Get the URL from the first command-line argument
-const url = process.argv[2];
-
-request(url, (error, response) => {
-  if (error) {
-    console.error(error);
+const url = process.argv.slice(2)[0]
+request(url, (error, response,body) => {
+  if(!error && response.statusCode === 200) {
+    console.log("code:", response.statusCode);
   } else {
-    // Print the status code in the desired format
-    console.log(`code: ${response.statusCode}`);
+      console.error('Error occured:', error);
   }
-});
+})
