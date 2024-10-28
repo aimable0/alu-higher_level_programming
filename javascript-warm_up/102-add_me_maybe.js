@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-exports.addMeMaybe = (number, thefunction)  => {
+#!/usr/bin/node
+exports.addMeMaybe = (number, thefunction) => {
   number++;
   thefunction(number);
-}
+};
