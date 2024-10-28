@@ -1,3 +1,3 @@
-#!/usr/bib/node
+#!/usr/bin/node
 myVar = 333;
 exports.myVar
